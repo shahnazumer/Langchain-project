@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 
+openai_api_key = 'OPENAI_API_KEY'
+
 load_dotenv()  # take environment variables from .env.
 
 # Function to load OpenAI model and get response
