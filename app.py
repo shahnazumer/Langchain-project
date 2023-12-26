@@ -5,14 +5,13 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 
-openai_api_key = 'OPENAI_API_KEY'
 
 load_dotenv()  # take environment variables from .env.
 
 # Function to load OpenAI model and get response
 def get_openai_response(question):
     # Pass the openai_api_key as a named parameter or set it as an environment variable
-    llm = OpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="text-davinci-003", temperature=0.5)
+    llm = OpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"), model_name="gpt-3.5-turbo-instruct", temperature=0.5)
     response = llm(question)
     return response
 
